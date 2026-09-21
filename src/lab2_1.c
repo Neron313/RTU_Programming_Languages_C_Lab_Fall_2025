@@ -12,9 +12,9 @@ int main(void) {
     int n;
 
     printf("Enter a positive integer n: ");
-    if (scanf("%d", &n) != 1 || n < 1) {
-        printf("Error: invalid input\n");
-        return 1;
+    while (scanf("%d", &n) != 1 || n < 1) {
+        while (getchar() != '\n'); // klaviatura buferini təmizləyir
+        printf("Invalid input. Enter a positive integer n: ");
     }
 
     int result = sum_to_n(n);

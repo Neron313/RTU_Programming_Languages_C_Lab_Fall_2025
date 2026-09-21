@@ -12,9 +12,9 @@ int main(void) {
     int n;
 
     printf("Enter n: ");
-    if (scanf("%d", &n) != 1 || n < 2) {
-        printf("Error: invalid input\n");
-        return 1;
+    while (scanf("%d", &n) != 1 || n < 2) {
+        while (getchar() != '\n');
+        printf("Invalid input. Enter n (>= 2): ");
     }
 
     printf("Primes: ");
